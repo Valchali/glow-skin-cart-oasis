@@ -53,7 +53,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800">Email</h3>
-                  <p className="text-gray-600">hello@glowskin.com</p>
+                  <p className="text-gray-600">Bomafart@gmail.com</p>
                 </div>
               </div>
 
@@ -63,7 +63,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800">Phone</h3>
-                  <p className="text-gray-600">+1 (555) 123-4567</p>
+                  <p className="text-gray-600">+1 (234) 802-779-7190</p>
                 </div>
               </div>
 
@@ -73,7 +73,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800">Address</h3>
-                  <p className="text-gray-600">123 Beauty Lane, Skincare City, SC 12345</p>
+                  <p className="text-gray-600">7 Fujena Rd, Ikorodu, 104101, Lagos</p>
                 </div>
               </div>
             </div>
@@ -81,8 +81,8 @@ const Contact = () => {
             <div className="bg-gradient-to-r from-pink-50 to-rose-50 p-8 rounded-2xl">
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Customer Support Hours</h3>
               <div className="space-y-2 text-gray-600">
-                <p><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM EST</p>
-                <p><strong>Saturday:</strong> 10:00 AM - 4:00 PM EST</p>
+                <p><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM WAT</p>
+                <p><strong>Saturday:</strong> Closed</p>
                 <p><strong>Sunday:</strong> Closed</p>
               </div>
             </div>
