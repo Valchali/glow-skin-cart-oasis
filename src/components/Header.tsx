@@ -47,6 +47,14 @@ const Header: React.FC<HeaderProps> = ({ cartItemsCount }) => {
               Products
             </Link>
             <Link 
+              to="/services" 
+              className={`text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium ${
+                isActive('/services') ? 'text-pink-600 border-b-2 border-pink-600' : ''
+              }`}
+            >
+              Services
+            </Link>
+            <Link 
               to="/about" 
               className={`text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium ${
                 isActive('/about') ? 'text-pink-600 border-b-2 border-pink-600' : ''
@@ -105,6 +113,13 @@ const Header: React.FC<HeaderProps> = ({ cartItemsCount }) => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Products
+              </Link>
+              <Link 
+                to="/services" 
+                className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Services
               </Link>
               <Link 
                 to="/about" 

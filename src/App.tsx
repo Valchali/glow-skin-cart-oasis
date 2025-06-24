@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from './components/Header';
 import Home from './pages/Home';
 import Products from './pages/Products';
+import Services from './pages/Services';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Cart from './pages/Cart';

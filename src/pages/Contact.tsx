@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Facebook, Instagram } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -78,7 +79,37 @@ const Contact = () => {
               </div>
             </div>
 
+            {/* Social Media Section */}
             <div className="bg-gradient-to-r from-pink-50 to-rose-50 p-8 rounded-2xl">
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Follow Us</h3>
+              <div className="flex space-x-4 mb-6">
+                <a 
+                  href="https://web.facebook.com/Valchali007/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-colors duration-200"
+                >
+                  <Facebook className="text-white" size={24} />
+                </a>
+                <a 
+                  href="https://instagram.com/bomafart_skincare" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 rounded-full flex items-center justify-center transition-colors duration-200"
+                >
+                  <Instagram className="text-white" size={24} />
+                </a>
+                <a 
+                  href="https://tiktok.com/@bomafart_skincare" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-black hover:bg-gray-800 rounded-full flex items-center justify-center transition-colors duration-200"
+                >
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-.88-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
+                  </svg>
+                </a>
+              </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Customer Support Hours</h3>
               <div className="space-y-2 text-gray-600">
                 <p><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM WAT</p>
