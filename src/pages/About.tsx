@@ -11,19 +11,19 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-5xl font-bold text-gray-800">
-                About <span className="bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">GlowSkin</span>
+                About <span className="bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">Bomafart Skincare</span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
                 We believe that beautiful skin is not just about looking good—it's about feeling confident, healthy, and radiant from within. Our mission is to provide you with premium skincare products that enhance your natural beauty.
               </p>
               <p className="text-lg text-gray-600">
-                Founded in 2020 by skincare enthusiasts, GlowSkin has been dedicated to creating products that are not only effective but also gentle and sustainable.
+                Founded in 2006 by skincare enthusiast, Bomafart Skincare has been dedicated to creating products that are not only effective but also gentle and sustainable.
               </p>
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600&h=400&fit=crop" 
-                alt="About GlowSkin"
+                src="./public/aboutimg.jpeg" 
+                alt="About Bomafart Skincare"
                 className="w-full h-96 object-cover rounded-3xl shadow-xl"
               />
             </div>
@@ -92,7 +92,7 @@ const About = () => {
             <h2 className="text-4xl font-bold text-gray-800 mb-8">Our Story</h2>
             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
               <p>
-                GlowSkin was born from a simple belief: everyone deserves to feel confident in their skin. Our founders, after struggling with their own skincare journeys, decided to create a brand that would offer effective, gentle, and accessible skincare solutions.
+                Bomafart Skincare was born from a simple belief: everyone deserves to feel confident in their skin. Our founders, after struggling with their own skincare journeys, decided to create a brand that would offer effective, gentle, and accessible skincare solutions.
               </p>
               <p>
                 What started as a small operation in a home kitchen has grown into a trusted brand used by thousands of customers worldwide. We're proud to have helped so many people discover their most radiant skin.
