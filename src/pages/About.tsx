@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Heart, Users, Award, Sparkles } from 'lucide-react';
 
