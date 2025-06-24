@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Heart, Users, Award, Sparkles } from 'lucide-react';
 
@@ -22,9 +21,9 @@ const About = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600&h=400&fit=crop" 
-                alt="About GlowSkin"
-                className="w-full h-96 object-cover rounded-3xl shadow-xl"
+                src="/WhatsApp Image 2025-06-19 at 4.09.47 PM.jpeg" 
+                alt="Bomafart Skincare Logo"
+                className="w-full h-96 object-contain rounded-3xl shadow-xl bg-white p-8"
               />
             </div>
           </div>
