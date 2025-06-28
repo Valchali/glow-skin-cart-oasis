@@ -32,7 +32,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
             {product.name}
           </h3>
           <span className="text-2xl font-bold text-pink-600">
-            ${product.price}
+            ₦{product.price}
           </span>
         </div>
         

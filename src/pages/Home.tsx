@@ -54,7 +54,7 @@ const Home = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Why Choose GlowSkin?</h2>
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">Why Choose Bomafart Skincare?</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               We're committed to providing you with the highest quality skincare products that deliver real results.
             </p>
