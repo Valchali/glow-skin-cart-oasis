@@ -21,7 +21,7 @@ const CartItem: React.FC<CartItemProps> = ({ item, onUpdateQuantity, onRemove })
       <div className="flex-1">
         <h3 className="text-lg font-semibold text-gray-800 mb-1">{item.name}</h3>
         <p className="text-gray-600 text-sm mb-2">{item.category}</p>
-        <p className="text-pink-600 font-bold text-lg">${item.price}</p>
+        <p className="text-pink-600 font-bold text-lg">₦{item.price}</p>
       </div>
       
       <div className="flex items-center space-x-3">
@@ -45,7 +45,7 @@ const CartItem: React.FC<CartItemProps> = ({ item, onUpdateQuantity, onRemove })
       
       <div className="text-right">
         <p className="text-lg font-bold text-gray-800 mb-2">
-          ${(item.price * item.quantity).toFixed(2)}
+          ₦{(item.price * item.quantity).toFixed(2)}
         </p>
         <button
           onClick={() => onRemove(item.id)}

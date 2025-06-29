@@ -71,20 +71,20 @@ const Cart: React.FC<CartProps> = ({ cartItems, onUpdateQuantity, onRemoveItem }
               <div className="space-y-4 mb-6">
                 <div className="flex justify-between text-gray-600">
                   <span>Subtotal ({cartItems.length} items)</span>
-                  <span>${subtotal.toFixed(2)}</span>
+                  <span>₦{subtotal.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between text-gray-600">
                   <span>Shipping</span>
-                  <span>{shipping === 0 ? 'Free' : `$${shipping.toFixed(2)}`}</span>
+                  <span>{shipping === 0 ? 'Free' : `₦${shipping.toFixed(2)}`}</span>
                 </div>
                 <div className="flex justify-between text-gray-600">
                   <span>Tax</span>
-                  <span>${tax.toFixed(2)}</span>
+                  <span>₦{tax.toFixed(2)}</span>
                 </div>
                 <div className="border-t pt-4">
                   <div className="flex justify-between text-xl font-bold text-gray-800">
                     <span>Total</span>
-                    <span>${total.toFixed(2)}</span>
+                    <span>₦{total.toFixed(2)}</span>
                   </div>
                 </div>
               </div>
@@ -92,7 +92,7 @@ const Cart: React.FC<CartProps> = ({ cartItems, onUpdateQuantity, onRemoveItem }
               {subtotal < 75 && (
                 <div className="bg-pink-50 border border-pink-200 rounded-lg p-4 mb-6">
                   <p className="text-sm text-pink-700">
-                    Add ${(75 - subtotal).toFixed(2)} more to get free shipping!
+                    Add ₦{(75 - subtotal).toFixed(2)} more to get free shipping!
                   </p>
                 </div>
               )}

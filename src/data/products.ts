@@ -4,11 +4,11 @@ import { Product } from '../types/Product';
 export const products: Product[] = [
   {
     id: 1,
-    name: "Hydrating Face Serum",
-    price: 89.99,
-    description: "Powerful hyaluronic acid serum that deeply hydrates and plumps your skin for a youthful glow.",
-    image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=400&fit=crop",
-    category: "Serums"
+    name: "Vita glow shower gel 500ml",
+    price:  20000,
+    description: "Reveal your skin’s natural radiance with our Vital Glow Shower Gel — a luxurious formula infused with nourishing botanicals to gently cleanse, hydrate, and brighten your skin",
+    image: "/public/product1.jpeg",
+    category: "Cleansers"
   },
   {
     id: 2,
