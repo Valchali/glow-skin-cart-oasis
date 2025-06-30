@@ -64,7 +64,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800">Phone</h3>
-                  <p className="text-gray-600">+1 (234) 802-779-7190</p>
+                  <p className="text-gray-600">+(234) 802-779-7190</p>
                 </div>
               </div>
 
@@ -84,7 +84,7 @@ const Contact = () => {
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Follow Us</h3>
               <div className="flex space-x-4 mb-6">
                 <a 
-                  href="https://web.facebook.com/Valchali007/" 
+                  href="https://web.facebook.com/bomafartskincare1/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-colors duration-200"

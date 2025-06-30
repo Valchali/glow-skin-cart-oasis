@@ -65,5 +65,197 @@ export const products: Product[] = [
     description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
     image: "/public/product8.jpeg",
     category: "Treatment Oil"
+  },
+  {
+    id: 9,
+    name: "Body treatment herbal oil",
+    price:  10000,
+    description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
+    image: "/public/product9.jpeg",
+    category: "Treatment Oil"
+  },
+  {
+    id: 10,
+    name: "Body treatment herbal oil",
+    price:  10000,
+    description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
+    image: "/public/product10.jpeg",
+    category: "Treatment Oil"
+  },
+  {
+    id: 11,
+    name: "Body treatment herbal oil",
+    price:  10000,
+    description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
+    image: "/public/product11.jpeg",
+    category: "Treatment Oil"
+  },
+  {
+    id: 12,
+    name: "Body treatment herbal oil",
+    price:  10000,
+    description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
+    image: "/public/product12.jpeg",
+    category: "Treatment Oil"
+  },
+  {
+    id: 13,
+    name: "Body treatment herbal oil",
+    price:  10000,
+    description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
+    image: "/public/product13.jpeg",
+    category: "Treatment Oil"
+  },
+  {
+    id: 14,
+    name: "Body treatment herbal oil",
+    price:  10000,
+    description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
+    image: "/public/product14.jpeg",
+    category: "Treatment Oil"
+  },
+  {
+    id: 15,
+    name: "Body treatment herbal oil",
+    price:  10000,
+    description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
+    image: "/public/product15.jpeg",
+    category: "Treatment Oil"
+  },
+  {
+    id: 16,
+    name: "Body treatment herbal oil",
+    price:  10000,
+    description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
+    image: "/public/product16.jpeg",
+    category: "Treatment Oil"
+  },
+  {
+    id: 17,
+    name: "Body treatment herbal oil",
+    price:  10000,
+    description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
+    image: "/public/product17.jpeg",
+    category: "Treatment Oil"
+  },
+  {
+    id: 17,
+    name: "Body treatment herbal oil",
+    price:  10000,
+    description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
+    image: "/public/product18.jpeg",
+    category: "Treatment Oil"
+  },
+  {
+    id: 18,
+    name: "Body treatment herbal oil",
+    price:  10000,
+    description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
+    image: "/public/product18.jpeg",
+    category: "Treatment Oil"
+  },
+  {
+    id: 19,
+    name: "Body treatment herbal oil",
+    price:  10000,
+    description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
+    image: "/public/product19.jpeg",
+    category: "Treatment Oil"
+  },
+  {
+    id: 20,
+    name: "Body treatment herbal oil",
+    price:  10000,
+    description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
+    image: "/public/product20.jpeg",
+    category: "Treatment Oil"
+  },
+  {
+    id: 21,
+    name: "Body treatment herbal oil",
+    price:  10000,
+    description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
+    image: "/public/product21.jpeg",
+    category: "Treatment Oil"
+  },
+  {
+    id: 22,
+    name: "Body treatment herbal oil",
+    price:  10000,
+    description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
+    image: "/public/product22.jpeg",
+    category: "Treatment Oil"
+  },
+  {
+    id: 23,
+    name: "Body treatment herbal oil",
+    price:  10000,
+    description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
+    image: "/public/product23.jpeg",
+    category: "Treatment Oil"
+  },
+  {
+    id: 24,
+    name: "Body treatment herbal oil",
+    price:  10000,
+    description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
+    image: "/public/product24.jpeg",
+    category: "Treatment Oil"
+  },
+  {
+    id: 25,
+    name: "Body treatment herbal oil",
+    price:  10000,
+    description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
+    image: "/public/product25.jpeg",
+    category: "Treatment Oil"
+  },
+  {
+    id: 26,
+    name: "Body treatment herbal oil",
+    price:  10000,
+    description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
+    image: "/public/product26.jpeg",
+    category: "Treatment Oil"
+  },
+  {
+    id: 27,
+    name: "Body treatment herbal oil",
+    price:  10000,
+    description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
+    image: "/public/product27.jpeg",
+    category: "Treatment Oil"
+  },
+  {
+    id: 28,
+    name: "Body treatment herbal oil",
+    price:  10000,
+    description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
+    image: "/public/product28.jpeg",
+    category: "Treatment Oil"
+  },
+  {
+    id: 29,
+    name: "Body treatment herbal oil",
+    price:  10000,
+    description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
+    image: "/public/product29.jpeg",
+    category: "Treatment Oil"
+  },
+  {
+    id: 30,
+    name: "Body treatment herbal oil",
+    price:  10000,
+    description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
+    image: "/public/product30.jpeg",
+    category: "Treatment Oil"
+  },
+  {
+    id: 31,
+    name: "Body treatment herbal oil",
+    price:  10000,
+    description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
+    image: "/public/product8.jpeg",
+    category: "Treatment Oil"
   }
 ];
