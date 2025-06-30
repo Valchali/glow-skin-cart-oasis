@@ -12,58 +12,58 @@ export const products: Product[] = [
   },
   {
     id: 2,
-    name: "Vitamin C Brightening Cream",
-    price: 75.50,
-    description: "Antioxidant-rich cream that brightens skin tone and reduces dark spots for radiant complexion.",
-    image: "https://images.unsplash.com/photo-1570194065650-d99fb4bedf0a?w=400&h=400&fit=crop",
-    category: "Moisturizers"
+    name: "Knuckle treatment Cream",
+    price: 30000,
+    description: "Say goodbye to dark, rough knuckles!",
+    image: "/public/product2.jpeg",
+    category: "Treatments"
   },
   {
     id: 3,
-    name: "Gentle Exfoliating Cleanser",
-    price: 45.00,
-    description: "Mild yet effective cleanser with natural exfoliants to reveal smoother, clearer skin.",
-    image: "https://images.unsplash.com/photo-1556228149-d75ef2893891?w=400&h=400&fit=crop",
-    category: "Cleansers"
+    name: "Face Lifting herbal treatment cream",
+    price: 30000,
+    description: "Achieve a firmer, younger-looking face—naturally",
+    image: "/public/product3.jpeg",
+    category: "Anti-Aging"
   },
   {
     id: 4,
-    name: "Anti-Aging Night Treatment",
-    price: 125.00,
-    description: "Intensive overnight treatment with retinol and peptides to reduce fine lines and wrinkles.",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop",
+    name: "Bumps Herbal Treatment Cream",
+    price: 10000,
+    description: "This Bumps Herbal Treatment Cream is specially made to clear razor bumps, ingrown hairs, pimples, and minor skin lumps. It soothes irritation, reduces swelling, and promotes smooth, even-toned skin",
+    image: "/public/product4.jpeg",
     category: "Treatments"
   },
   {
     id: 5,
-    name: "Refreshing Toner Mist",
-    price: 35.99,
-    description: "Alcohol-free toner that balances pH and prepares skin for optimal product absorption.",
-    image: "https://images.unsplash.com/photo-1556228724-f6f48070d0c3?w=400&h=400&fit=crop",
-    category: "Toners"
+    name: "Ringworm & Eczema Herbal Treatment Oil",
+    price: 10000,
+    description: "Our Herbal Treatment Oil is specially formulated to treat ringworm, eczema, skin rashes, and irritation using potent herbal extracts that soothe, heal, and restore the skin.",
+    image: "/public/product5.jpeg",
+    category: "Treatments"
   },
   {
     id: 6,
-    name: "Nourishing Eye Cream",
-    price: 95.00,
-    description: "Rich eye cream that targets dark circles, puffiness, and crow's feet for younger-looking eyes.",
-    image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=400&fit=crop",
-    category: "Eye Care"
+    name: "Green veins herbal oil",
+    price: 20000,
+    description: "Our powerful Green Vein Herbal Oil is specially formulated with natural herbs to reduce the appearance of green veins, spider veins, and discoloration. It improves blood circulation, strengthens capillaries, and promotes smooth, radiant skin",
+    image: "/public/product6.jpeg",
+    category: "Treatments"
   },
   {
     id: 7,
-    name: "SPF 50 Daily Sunscreen",
-    price: 42.50,
-    description: "Lightweight, broad-spectrum sunscreen that protects against UV damage without white residue.",
-    image: "https://images.unsplash.com/photo-1570194066977-03d50da7bdde?w=400&h=400&fit=crop",
-    category: "Suncare"
+    name: "Anti-aging herbal cream and soap",
+    price:  45000,
+    description: "Formulated with active ingredients that help reduce wrinkles, fine lines, and age spots while deeply hydrating your skin. This lightweight, non-greasy formula firms, smooths, and revitalizes dull skin for a youthful glow.",
+    image: "/public/product7.jpeg",
+    category: "Anti-aging/Cleanser"
   },
   {
     id: 8,
-    name: "Collagen Boosting Mask",
-    price: 55.00,
-    description: "Weekly treatment mask infused with collagen peptides to firm and rejuvenate tired skin.",
-    image: "https://images.unsplash.com/photo-1556228149-d75ef2893891?w=400&h=400&fit=crop",
-    category: "Masks"
+    name: "Body treatment herbal oil",
+    price:  10000,
+    description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
+    image: "/public/product8.jpeg",
+    category: "Treatment Oil"
   }
 ];
