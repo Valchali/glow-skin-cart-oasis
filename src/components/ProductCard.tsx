@@ -15,7 +15,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
         <img 
           src={product.image} 
           alt={product.name}
-          className="w-full h-48 object-contain bg-gray-50 p-4 group-hover:scale-105 transition-transform duration-300"
+          className="w-full h-48 object-cover bg-gray-50 p-2 group-hover:scale-105 transition-transform duration-300"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         <button
@@ -31,9 +31,16 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
           <h3 className="text-xl font-semibold text-gray-800 group-hover:text-pink-600 transition-colors duration-200">
             {product.name}
           </h3>
-          <span className="text-2xl font-bold text-pink-600">
-            ₦{product.price}
-          </span>
+          <div className="text-right">
+            <span className="text-2xl font-bold text-pink-600">
+              ₦{product.price.toLocaleString()}
+            </span>
+            {product.originalPrice && (
+              <div className="text-sm text-gray-500 line-through">
+                ₦{product.originalPrice.toLocaleString()}
+              </div>
+            )}
+          </div>
         </div>
         
         <p className="text-gray-600 text-sm mb-4 line-clamp-2">

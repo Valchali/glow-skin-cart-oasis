@@ -1,4 +1,3 @@
-
 import { Product } from '../types/Product';
 
 export const products: Product[] = [
@@ -6,6 +5,7 @@ export const products: Product[] = [
     id: 1,
     name: "Vita glow shower gel 500ml",
     price: 20000,
+    originalPrice: 25000,
     description: "Reveal your skin's natural radiance with our Vital Glow Shower Gel — a luxurious formula infused with nourishing botanicals to gently cleanse, hydrate, and brighten your skin",
     image: "/product1.jpeg",
     category: "Cleansers"
@@ -126,7 +126,7 @@ export const products: Product[] = [
     id: 16,
     name: "White patches treatment",
     price: 35000,
-    description: "Restore your skin’s natural tone—gently and effectively",
+    description: "Restore your skin's natural tone—gently and effectively",
     image: "/product16.jpeg",
     category: "Specialty Beauty"
   },
@@ -141,8 +141,8 @@ export const products: Product[] = [
   {
     id: 18,
     name: "Body treatment herbal shower gel",
-    price: 23000,
-    description: "Infused with healing herbs and natural extracts, it deeply cleanses without stripping your skin’s moisture",
+    price: 23000,
+    description: "Infused with healing herbs and natural extracts, it deeply cleanses without stripping your skin's moisture",
     image: "/product18.jpeg",
     category: "Cleanser"
   },
@@ -205,7 +205,7 @@ export const products: Product[] = [
   {
     id: 26,
     name: "Anti-aging body lotion",
-    price:  20000,
+    price:  20000,
     description: "Rediscover youthful radiance with Bomafart skincare Revitalizing Anti-Aging lotion, specially designed for those 40yrs and above",
     image: "/product26.jpeg",
     category: "Anti-aging"
@@ -242,7 +242,7 @@ export const products: Product[] = [
     image: "/product30.jpeg",
     category: " Skincare"
   },
-    {
+  {
     id: 31,
     name: "Complete Skincare Set",
     price: 85000,
