@@ -18,7 +18,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://web.facebook.com/Valchali007/" 
+                href="https://web.facebook.com/bomafartskincare1/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-pink-400 transition-colors"
@@ -26,12 +26,22 @@ const Footer = () => {
                 <Facebook size={24} />
               </a>
               <a 
-                href="#" 
+                href="https://instagram.com/bomafart_skincare" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-pink-400 transition-colors"
               >
                 <Instagram size={24} />
+              </a>
+              <a 
+                href="https://www.tiktok.com/@bomafartskincare1" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-pink-400 transition-colors"
+              >
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-.88-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
+                </svg>
               </a>
               <a 
                 href="https://wa.me/2348166631031" 
@@ -99,7 +109,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail size={16} />
-                <span>info@bomafartskincare.com</span>
+                <span>valchali@yahoo.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin size={16} />
