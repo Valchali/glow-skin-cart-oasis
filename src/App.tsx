@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import Services from './pages/Services';
@@ -79,26 +80,29 @@ const App = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <div className="min-h-screen bg-white">
+          <div className="min-h-screen bg-white flex flex-col">
             <Header cartItemsCount={cartItemsCount} />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/products" element={<Products onAddToCart={addToCart} />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route 
-                path="/cart" 
-                element={
-                  <Cart 
-                    cartItems={cartItems}
-                    onUpdateQuantity={updateQuantity}
-                    onRemoveItem={removeFromCart}
-                  />
-                } 
-              />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+            <main className="flex-1">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/products" element={<Products onAddToCart={addToCart} />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route 
+                  path="/cart" 
+                  element={
+                    <Cart 
+                      cartItems={cartItems}
+                      onUpdateQuantity={updateQuantity}
+                      onRemoveItem={removeFromCart}
+                    />
+                  } 
+                />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </main>
+            <Footer />
           </div>
         </BrowserRouter>
       </TooltipProvider>
