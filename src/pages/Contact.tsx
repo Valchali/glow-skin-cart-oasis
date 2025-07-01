@@ -100,7 +100,7 @@ const Contact = () => {
                   <Instagram className="text-white" size={24} />
                 </a>
                 <a 
-                  href="https://tiktok.com/@bomafart_skincare" 
+                  href="https://www.tiktok.com/@bomafartskincare1" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-black hover:bg-gray-800 rounded-full flex items-center justify-center transition-colors duration-200"
@@ -110,7 +110,7 @@ const Contact = () => {
                   </svg>
                 </a>
                 <a 
-                  href="https://wa.me/12348027797190" 
+                  href="https://wa.me/2348027797190" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center transition-colors duration-200"
