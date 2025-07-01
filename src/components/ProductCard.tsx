@@ -28,7 +28,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
       
       <div className="p-6">
         <div className="flex justify-between items-start mb-2">
-          <h3 className="text-xl font-semibold text-gray-800 group-hover:text-pink-600 transition-colors duration-200">
+          <h3 className="text-xl font-semibold text-gray-800 transition-colors duration-200">
             {product.name}
           </h3>
           <div className="text-right">
