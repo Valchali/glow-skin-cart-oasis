@@ -15,7 +15,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
         <img 
           src={product.image} 
           alt={product.name}
-          className="w-full h-48 object-cover bg-gray-50 p-2 group-hover:scale-105 transition-transform duration-300"
+          className="w-full h-48 object-contain bg-gray-50 p-4 group-hover:scale-105 transition-transform duration-300"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         <button
