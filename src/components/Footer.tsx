@@ -90,7 +90,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li>Medical Dermatology</li>
+              <li>Herbal Dermatology</li>
               <li>Cosmetic Treatments</li>
               <li>Anti-Aging Solutions</li>
               <li>Skin Cancer Screening</li>
@@ -109,7 +109,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail size={16} />
-                <span>valchali@yahoo.com</span>
+                <span>Bomafart@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin size={16} />

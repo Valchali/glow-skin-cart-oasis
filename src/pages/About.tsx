@@ -21,7 +21,7 @@ const About = () => {
             </div>
             <div className="relative">
               <img 
-                src="./public/aboutimg.jpeg" 
+                src="/aboutimg.jpeg" 
                 alt="About Bomafart Skincare"
                 className="w-full h-96 object-cover rounded-3xl shadow-xl"
               />
@@ -91,7 +91,7 @@ const About = () => {
             <h2 className="text-4xl font-bold text-gray-800 mb-8">Our Story</h2>
             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
               <p>
-                Bomafart Skincare was born from a simple belief: everyone deserves to feel confident in their skin. Our founders, after struggling with their own skincare journeys, decided to create a brand that would offer effective, gentle, and accessible skincare solutions.
+                Bomafart Skincare was born from a simple belief: everyone deserves to feel confident in their skin. Our founder, after struggling with their own skincare journeys, decided to create a brand that would offer effective, gentle, and accessible skincare solutions.
               </p>
               <p>
                 What started as a small operation in a home kitchen has grown into a trusted brand used by thousands of customers worldwide. We're proud to have helped so many people discover their most radiant skin.

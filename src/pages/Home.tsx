@@ -45,6 +45,7 @@ const Home = () => {
                 alt="Skincare Products"
                 className="relative z-10 w-full h-96 object-cover rounded-3xl shadow-2xl"
               />
+              
             </div>
           </div>
         </div>

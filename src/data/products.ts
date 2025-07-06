@@ -48,7 +48,7 @@ export const products: Product[] = [
   },
   {
     id: 6,
-    name: "Green veins herbal oil",
+    name: "Green Veins Herbal Oil",
     price: 20000,
     originalPrice: 25000,
     description: "Our powerful Green Vein Herbal Oil is specially formulated with natural herbs to reduce the appearance of green veins, spider veins, and discoloration. It improves blood circulation, strengthens capillaries, and promotes smooth, radiant skin",
@@ -57,7 +57,7 @@ export const products: Product[] = [
   },
   {
     id: 7,
-    name: "Anti-aging herbal cream and soap",
+    name: "Anti-aging Herbal Cream And Soap",
     price: 45000,
     originalPrice: 50000,
     description: "Formulated with active ingredients that help reduce wrinkles, fine lines, and age spots while deeply hydrating your skin. This lightweight, non-greasy formula firms, smooths, and revitalizes dull skin for a youthful glow.",
@@ -66,7 +66,7 @@ export const products: Product[] = [
   },
   {
     id: 8,
-    name: "Body treatment herbal oil",
+    name: "Body Treatment Herbal Oil",
     price: 10000,
     originalPrice: 15000,
     description: "Made with carefully selected natural oils and herbs that deeply penetrate the skin to repair, moisturize, and restore your natural glow",
@@ -75,7 +75,7 @@ export const products: Product[] = [
   },
   {
     id: 9,
-    name: "Hydrating gentle cleanser",
+    name: "Hydrating Gentle Cleanser",
     price: 8000,
     originalPrice: 10000,
     description: "Infused with skin-loving ingredients like aloe vera and glycerin, it's perfect for sensitive, dry, or mature skin types.",
@@ -257,7 +257,7 @@ export const products: Product[] = [
     id: 30,
     name: "White patches oil",
     price: 85000,
-    description: " Deeply nourish & protect sensitive, compromised skin",
+    description: "Deeply nourish & protect sensitive, compromised skin",
     image: "/product30.jpeg",
     category: " Skincare"
   },
