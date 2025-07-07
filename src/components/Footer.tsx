@@ -44,7 +44,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a 
-                href="https://wa.me/2348166631031" 
+                href="https://wa.me/2348027797190" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-pink-400 transition-colors"
@@ -105,7 +105,7 @@ const Footer = () => {
             <div className="space-y-3 text-sm text-gray-300">
               <div className="flex items-center space-x-2">
                 <Phone size={16} />
-                <span>+(234) 802-779-7190</span>
+                <span>+(234) 805 662 1926</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail size={16} />
