@@ -91,7 +91,7 @@ const About = () => {
             <h2 className="text-4xl font-bold text-gray-800 mb-8">Our Story</h2>
             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
               <p>
-                Bomafart Skincare was born from a simple belief: everyone deserves to feel confident in their skin. Our founder, after struggling with their own skincare journeys, decided to create a brand that would offer effective, gentle, and accessible skincare solutions.
+               Bomafart Skincare was born from a mother’s determination to heal and protect. After the birth of her second child, our founder crafted a gentle herbal soap in her kitchen to soothe her baby’s delicate skin. When friends and family saw the remarkable results—softness, clarity, and relief from irritations—they begged for their own bars. Word spread, and what began as a labor of love became a mission: to create skincare that’s as nurturing as a mother’s touch.
               </p>
               <p>
                 What started as a small operation in a home kitchen has grown into a trusted brand used by thousands of customers worldwide. We're proud to have helped so many people discover their most radiant skin.
