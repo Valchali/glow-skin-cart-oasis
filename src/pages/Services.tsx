@@ -29,7 +29,7 @@ const Services = () => {
     {
       icon: <Zap className="w-8 h-8 text-pink-600" />,
       title: "Laser Keloid & Wart Removal",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop",
       services: [
         {
           name: "Professional Laser Treatment",
