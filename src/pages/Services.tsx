@@ -6,101 +6,101 @@ const Services = () => {
   const serviceCategories = [
     {
       icon: <Stethoscope className="w-8 h-8 text-pink-600" />,
-      title: "Medical Dermatology",
+      title: "Herbal Dermatology",
       services: [
         {
-          name: "Skin Cancer Screening & Treatment",
-          details: ["Mole evaluations (dermatoscopy)", "Biopsies (shave, punch, excisional)", "Mohs surgery for skin cancer"]
+          name: "Skin Cancer Screening & Herbal Treatment",
+          details: ["Mole evaluations and natural assessments", "Herbal remedies for skin conditions", "Natural healing approaches"]
         },
         {
           name: "Acne Management", 
-          details: ["Prescription creams/oral medications", "Chemical peels", "Cortisone injections for cysts"]
+          details: ["Herbal creams and natural treatments", "Plant-based chemical peels", "Natural anti-inflammatory treatments"]
         },
         {
-          name: "Eczema/Psoriasis Care",
-          details: ["Biologic injections (e.g., Dupixent)", "Phototherapy (UV light treatment)"]
+          name: "Eczema/Psoriasis Herbal Care",
+          details: ["Herbal oil treatments", "Natural phototherapy alternatives"]
         },
         {
           name: "Rosacea & Redness Control",
-          details: ["Laser therapies (Vbeam)", "Topical anti-inflammatory treatments"]
+          details: ["Herbal anti-inflammatory treatments", "Natural calming remedies"]
         },
         {
           name: "Infectious Skin Conditions",
-          details: ["Wart removal (cryotherapy, acids)", "Herpes/zoster treatment", "Fungal/bacterial infection care"]
+          details: ["Natural wart removal treatments", "Herbal antiviral remedies", "Plant-based antifungal treatments"]
         }
       ]
     },
     {
       icon: <Scissors className="w-8 h-8 text-pink-600" />,
-      title: "Surgical Procedures",
+      title: "Natural Treatment Procedures",
       services: [
         {
-          name: "Cyst/Tumor Removal",
-          details: ["Professional surgical removal procedures"]
+          name: "Herbal Cyst/Tumor Treatment",
+          details: ["Natural herbal treatment procedures"]
         },
         {
-          name: "Skin Tag Removal",
-          details: ["Cryotherapy or snipping techniques"]
+          name: "Skin Tag Herbal Removal",
+          details: ["Natural removal techniques using herbal solutions"]
         },
         {
-          name: "Scar Revision",
-          details: ["Keloid steroid injections", "Surgical scar improvement"]
+          name: "Scar Revision with Herbs",
+          details: ["Herbal treatments for keloids", "Natural scar improvement methods"]
         }
       ]
     },
     {
       icon: <Sparkles className="w-8 h-8 text-pink-600" />,
-      title: "Cosmetic Dermatology",
+      title: "Herbal Cosmetic Treatments",
       services: [
         {
-          name: "Anti-Aging Treatments",
-          details: ["Botox/Dysport/Xeomin", "Dermal fillers (Juvederm, Restylane)", "PRP (Platelet-Rich Plasma) therapy"]
+          name: "Anti-Aging Herbal Treatments",
+          details: ["Natural herbal face masks", "Plant-based anti-aging creams", "Herbal rejuvenation therapy"]
         },
         {
-          name: "Laser Treatments",
-          details: ["Fraxel for wrinkles/scars", "IPL for sun spots", "Laser hair removal"]
+          name: "Natural Skin Treatments",
+          details: ["Herbal peels for wrinkles/scars", "Natural spot removal treatments", "Plant-based hair removal methods"]
         },
         {
-          name: "Advanced Treatments",
-          details: ["Chemical Peels (glycolic, TCA)", "Microneedling (with/without RF)"]
+          name: "Advanced Herbal Treatments",
+          details: ["Natural Chemical Peels (plant-based)", "Herbal microneedling treatments"]
         }
       ]
     },
     {
       icon: <Users className="w-8 h-8 text-pink-600" />,
-      title: "Hair & Nail Services",
+      title: "Hair & Nail Herbal Services",
       services: [
         {
-          name: "Hair Loss Treatment",
-          details: ["PRP for androgenetic alopecia", "Minoxidil/finasteride prescriptions"]
+          name: "Hair Loss Herbal Treatment",
+          details: ["Natural herbal treatments for hair growth", "Plant-based hair growth oils"]
         },
         {
-          name: "Scalp Conditions",
-          details: ["Psoriasis/folliculitis management"]
+          name: "Scalp Herbal Conditions",
+          details: ["Natural psoriasis/folliculitis management"]
         },
         {
-          name: "Nail Fungus Treatment",
-          details: ["Oral antifungals (terbinafine)", "Laser nail therapy"]
+          name: "Nail Fungus Herbal Treatment",
+          details: ["Natural antifungal herbal treatments", "Plant-based nail therapy"]
         }
       ]
     },
     {
       icon: <Baby className="w-8 h-8 text-pink-600" />,
-      title: "Pediatric Dermatology",
+      title: "Pediatric Herbal Dermatology",
       services: [
         {
-          name: "Specialized Child Care",
-          details: ["Birthmark evaluations (hemangiomas)", "Genetic skin disorder management", "Teen acne programs"]
+          name: "Specialized Child Herbal Care",
+          details: ["Natural birthmark treatments", "Herbal remedies for genetic skin disorders", "Teen acne herbal programs"]
         }
       ]
     },
     {
       icon: <Microscope className="w-8 h-8 text-pink-600" />,
-      title: "Specialized Diagnostics",
+      title: "Specialized Herbal Diagnostics",
       services: [
         {
-          name: "Advanced Testing",
-          details: ["Patch testing (for contact allergies)", "Skin prick tests (for urticaria)"]
+          name: "Natural Assessment Methods",
+          details: ["Herbal skin analysis", "Natural allergy testing methods"]
         }
       ]
     }
@@ -111,9 +111,9 @@ const Services = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Our Services</h1>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Our Herbal Services</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive dermatological care with advanced treatments and personalized solutions for all your skin, hair, and nail needs.
+            Comprehensive herbal dermatological care with natural treatments and personalized herbal solutions for all your skin, hair, and nail needs.
           </p>
         </div>
 
@@ -152,7 +152,7 @@ const Services = () => {
           <div className="bg-gradient-to-r from-pink-50 to-rose-50 rounded-2xl p-8 max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Ready to Get Started?</h2>
             <p className="text-xl text-gray-600 mb-6">
-              Schedule a consultation today to discuss your skin care needs with our expert dermatologists.
+              Schedule a consultation today to discuss your skin care needs with our expert herbal dermatologists.
             </p>
             <a 
               href="/contact" 
