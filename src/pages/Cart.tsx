@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShoppingBag, CreditCard, Banknote } from 'lucide-react';
+import { ShoppingBag, MessageCircle } from 'lucide-react';
 import CartItem from '../components/CartItem';
 import { CartItem as CartItemType } from '../types/Product';
 
@@ -13,14 +13,30 @@ interface CartProps {
 
 const Cart: React.FC<CartProps> = ({ cartItems, onUpdateQuantity, onRemoveItem }) => {
   const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-  const shipping = subtotal > 75 ? 0 : 9.99;
-  const tax = subtotal * 0.08;
+  const shipping = subtotal > 75000 ? 0 : 2500; // Updated for Nigerian pricing
+  const tax = subtotal * 0.075; // 7.5% VAT in Nigeria
   const total = subtotal + shipping + tax;
 
-  const handlePayment = (method: string) => {
-    console.log(`Processing payment with ${method}`);
-    alert(`Redirecting to ${method} checkout...`);
-    // Here you would integrate with actual payment processors
+  const sendCartToWhatsApp = () => {
+    const phoneNumber = "2348027797190";
+    let message = "Hi! I want to order the following items:\n\n";
+    
+    cartItems.forEach(item => {
+      message += `• ${item.name} - ${item.quantity}x - ₦${item.price.toLocaleString()}\n`;
+    });
+    
+    message += `\nSubtotal: ₦${subtotal.toLocaleString()}\n`;
+    message += `Shipping: ${shipping === 0 ? 'Free' : `₦${shipping.toLocaleString()}`}\n`;
+    message += `Tax (7.5%): ₦${tax.toLocaleString()}\n`;
+    message += `Total: ₦${total.toLocaleString()}\n\n`;
+    message += "My details:\n";
+    message += "Name: [Please fill your name]\n";
+    message += "Phone: [Please fill your phone number]\n";
+    message += "Address: [Please fill your delivery address]\n\n";
+    message += "Thank you!";
+    
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   if (cartItems.length === 0) {
@@ -71,50 +87,46 @@ const Cart: React.FC<CartProps> = ({ cartItems, onUpdateQuantity, onRemoveItem }
               <div className="space-y-4 mb-6">
                 <div className="flex justify-between text-gray-600">
                   <span>Subtotal ({cartItems.length} items)</span>
-                  <span>₦{subtotal.toFixed(2)}</span>
+                  <span>₦{subtotal.toLocaleString()}</span>
                 </div>
                 <div className="flex justify-between text-gray-600">
                   <span>Shipping</span>
-                  <span>{shipping === 0 ? 'Free' : `₦${shipping.toFixed(2)}`}</span>
+                  <span>{shipping === 0 ? 'Free' : `₦${shipping.toLocaleString()}`}</span>
                 </div>
                 <div className="flex justify-between text-gray-600">
-                  <span>Tax</span>
-                  <span>₦{tax.toFixed(2)}</span>
+                  <span>Tax (7.5% VAT)</span>
+                  <span>₦{tax.toLocaleString()}</span>
                 </div>
                 <div className="border-t pt-4">
                   <div className="flex justify-between text-xl font-bold text-gray-800">
                     <span>Total</span>
-                    <span>₦{total.toFixed(2)}</span>
+                    <span>₦{total.toLocaleString()}</span>
                   </div>
                 </div>
               </div>
 
-              {subtotal < 75 && (
+              {subtotal < 75000 && (
                 <div className="bg-pink-50 border border-pink-200 rounded-lg p-4 mb-6">
                   <p className="text-sm text-pink-700">
-                    Add ₦{(75 - subtotal).toFixed(2)} more to get free shipping!
+                    Add ₦{(75000 - subtotal).toLocaleString()} more to get free shipping!
                   </p>
                 </div>
               )}
 
               <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Payment Options</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">Checkout Options</h3>
                 
                 <button
-                  onClick={() => handlePayment('Credit Card')}
-                  className="w-full bg-gradient-to-r from-pink-600 to-rose-600 text-white py-4 rounded-lg font-semibold hover:from-pink-700 hover:to-rose-700 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2"
+                  onClick={sendCartToWhatsApp}
+                  className="w-full bg-green-500 hover:bg-green-600 text-white py-4 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2"
                 >
-                  <CreditCard size={20} />
-                  <span>Pay with Card</span>
+                  <MessageCircle size={20} />
+                  <span>Order via WhatsApp</span>
                 </button>
                 
-                <button
-                  onClick={() => handlePayment('PayPal')}
-                  className="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2"
-                >
-                  <Banknote size={20} />
-                  <span>Pay with PayPal</span>
-                </button>
+                <p className="text-xs text-gray-500 text-center">
+                  Click to send your order details via WhatsApp for easy checkout
+                </p>
               </div>
 
               <div className="mt-6 pt-6 border-t">
