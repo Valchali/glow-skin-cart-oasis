@@ -11,23 +11,27 @@ interface CartItemProps {
 
 const CartItem: React.FC<CartItemProps> = ({ item, onUpdateQuantity, onRemove }) => {
   return (
-    <div className="flex items-center space-x-4 bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-200">
+    <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 bg-white p-4 sm:p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-200">
       <img 
         src={item.image} 
         alt={item.name}
-        className="w-20 h-20 object-cover rounded-xl"
+        className="w-20 h-20 object-cover rounded-xl mx-auto sm:mx-0"
       />
       
-      <div className="flex-1">
+      <div className="flex-1 text-center sm:text-left w-full sm:w-auto">
         <h3 className="text-lg font-semibold text-gray-800 mb-1">{item.name}</h3>
         <p className="text-gray-600 text-sm mb-2">{item.category}</p>
-        <p className="text-pink-600 font-bold text-lg">₦{item.price}</p>
+        <p className="text-pink-600 font-bold text-lg">₦{item.price.toLocaleString()}</p>
       </div>
       
-      <div className="flex items-center space-x-3">
+      <div className="flex items-center justify-center space-x-3 w-full sm:w-auto">
         <button
           onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}
-          className="p-2 text-gray-500 hover:text-pink-600 hover:bg-pink-50 rounded-lg transition-colors duration-200"
+          className={`p-2 rounded-lg transition-colors duration-200 ${
+            item.quantity <= 1 
+              ? 'text-gray-300 cursor-not-allowed' 
+              : 'text-gray-500 hover:text-pink-600 hover:bg-pink-50'
+          }`}
           disabled={item.quantity <= 1}
         >
           <Minus size={16} />
@@ -43,9 +47,9 @@ const CartItem: React.FC<CartItemProps> = ({ item, onUpdateQuantity, onRemove })
         </button>
       </div>
       
-      <div className="text-right">
-        <p className="text-lg font-bold text-gray-800 mb-2">
-          ₦{(item.price * item.quantity).toFixed(2)}
+      <div className="flex flex-col sm:flex-row items-center justify-between sm:justify-end space-y-2 sm:space-y-0 sm:space-x-4 w-full sm:w-auto">
+        <p className="text-lg font-bold text-gray-800">
+          ₦{(item.price * item.quantity).toLocaleString()}
         </p>
         <button
           onClick={() => onRemove(item.id)}
