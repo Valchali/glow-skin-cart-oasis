@@ -13,7 +13,11 @@ import Services from './pages/Services';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Cart from './pages/Cart';
+import Auth from './pages/Auth';
+import Admin from './pages/Admin';
+import SetupAdmin from './pages/SetupAdmin';
 import NotFound from './pages/NotFound';
+import { AuthProvider } from './contexts/AuthContext';
 import { Product, CartItem } from './types/Product';
 import { toast } from '@/hooks/use-toast';
 
@@ -76,36 +80,41 @@ const App = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <div className="min-h-screen bg-white flex flex-col">
-            <Header cartItemsCount={cartItemsCount} />
-            <main className="flex-1">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/products" element={<Products onAddToCart={addToCart} />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route 
-                  path="/cart" 
-                  element={
-                    <Cart 
-                      cartItems={cartItems}
-                      onUpdateQuantity={updateQuantity}
-                      onRemoveItem={removeFromCart}
-                    />
-                  } 
-                />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </main>
-            <Footer />
-          </div>
-        </BrowserRouter>
-      </TooltipProvider>
+      <AuthProvider>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <div className="min-h-screen bg-white flex flex-col">
+              <Header cartItemsCount={cartItemsCount} />
+              <main className="flex-1">
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/products" element={<Products onAddToCart={addToCart} />} />
+                  <Route path="/services" element={<Services />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route 
+                    path="/cart" 
+                    element={
+                      <Cart 
+                        cartItems={cartItems}
+                        onUpdateQuantity={updateQuantity}
+                        onRemoveItem={removeFromCart}
+                      />
+                    } 
+                  />
+                  <Route path="/auth" element={<Auth />} />
+                  <Route path="/admin" element={<Admin />} />
+                  <Route path="/setup-admin" element={<SetupAdmin />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </main>
+              <Footer />
+            </div>
+          </BrowserRouter>
+        </TooltipProvider>
+      </AuthProvider>
     </QueryClientProvider>
   );
 };

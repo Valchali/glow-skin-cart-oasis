@@ -1,14 +1,23 @@
 
 import React from 'react';
-import { ShoppingCart, Menu, X } from 'lucide-react';
+import { ShoppingCart, Menu, X, User, LogOut, Shield } from 'lucide-react';
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Button } from './ui/button';
+import { useAuth } from '@/contexts/AuthContext';
 
 interface HeaderProps {
   cartItemsCount: number;
 }
 
 const Header: React.FC<HeaderProps> = ({ cartItemsCount }) => {
+  const { user, isAdmin, signOut } = useAuth();
+  const navigate = useNavigate();
+
+  const handleSignOut = async () => {
+    await signOut();
+    navigate('/');
+  };
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -72,8 +81,31 @@ const Header: React.FC<HeaderProps> = ({ cartItemsCount }) => {
             </Link>
           </nav>
 
-          {/* Cart and Mobile Menu */}
+          {/* Auth and Cart Actions */}
           <div className="flex items-center space-x-4">
+            {user ? (
+              <>
+                {isAdmin && (
+                  <Button asChild variant="outline" size="sm">
+                    <Link to="/admin" className="flex items-center gap-2">
+                      <Shield className="h-4 w-4" />
+                      Admin
+                    </Link>
+                  </Button>
+                )}
+                <Button onClick={handleSignOut} variant="outline" size="sm">
+                  <LogOut className="h-4 w-4" />
+                </Button>
+              </>
+            ) : (
+              <Button asChild variant="outline" size="sm">
+                <Link to="/auth" className="flex items-center gap-2">
+                  <User className="h-4 w-4" />
+                  Login
+                </Link>
+              </Button>
+            )}
+            
             <Link 
               to="/cart" 
               className="relative p-2 text-gray-700 hover:text-pink-600 transition-colors duration-200"
