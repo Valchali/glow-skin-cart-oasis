@@ -21,7 +21,7 @@ serve(async (req) => {
     console.log('Setting up admin user...');
 
     // Create admin user with specific credentials
-    const adminEmail = 'bomafart@admin.com';
+    const adminEmail = 'valchali@yahoo.com';
     const adminPassword = 'Skincare';
     const adminUsername = 'Bomafart';
 

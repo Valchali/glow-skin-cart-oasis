@@ -19,7 +19,7 @@ const SetupAdmin: React.FC = () => {
 
       toast({
         title: "Admin Setup Complete",
-        description: `Admin user created with credentials: Email: bomafart@admin.com, Password: Skincare`
+        description: `Admin user created with credentials: Email: valchali@yahoo.com, Password: Skincare`
       });
 
     } catch (error) {
@@ -48,7 +48,7 @@ const SetupAdmin: React.FC = () => {
           </p>
           <div className="bg-muted p-4 rounded-lg">
             <p><strong>Username:</strong> Bomafart</p>
-            <p><strong>Email:</strong> bomafart@admin.com</p>
+            <p><strong>Email:</strong> valchali@yahoo.com</p>
             <p><strong>Password:</strong> Skincare</p>
           </div>
           <Button onClick={setupAdmin} disabled={loading} className="w-full">
