@@ -18,27 +18,33 @@ export type Database = {
         Row: {
           category: string | null
           created_at: string | null
+          description: string | null
           id: number
           image: string
           name: string
+          original_price: number | null
           price: number
           updated_at: string | null
         }
         Insert: {
           category?: string | null
           created_at?: string | null
+          description?: string | null
           id?: number
           image: string
           name: string
+          original_price?: number | null
           price: number
           updated_at?: string | null
         }
         Update: {
           category?: string | null
           created_at?: string | null
+          description?: string | null
           id?: number
           image?: string
           name?: string
+          original_price?: number | null
           price?: number
           updated_at?: string | null
         }

@@ -14,8 +14,10 @@ interface Product {
   id: number;
   name: string;
   price: number;
+  originalPrice?: number;
+  description?: string;
   image: string;
-  category: string;
+  category?: string;
 }
 
 const Admin: React.FC = () => {
@@ -23,9 +25,12 @@ const Admin: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [editingProduct, setEditingProduct] = useState<Product | null>(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [imageFile, setImageFile] = useState<File | null>(null);
   const [formData, setFormData] = useState({
     name: '',
     price: '',
+    originalPrice: '',
+    description: '',
     image: '',
     category: ''
   });
@@ -67,10 +72,33 @@ const Admin: React.FC = () => {
     setLoading(true);
 
     try {
+      let imageUrl = formData.image;
+      
+      // Handle image upload if a new file is selected
+      if (imageFile) {
+        const fileExt = imageFile.name.split('.').pop();
+        const fileName = `${Date.now()}.${fileExt}`;
+        
+        const { data: uploadData, error: uploadError } = await supabase.storage
+          .from('product-images')
+          .upload(fileName, imageFile);
+
+        if (uploadError) throw uploadError;
+        
+        // Get public URL
+        const { data: { publicUrl } } = supabase.storage
+          .from('product-images')
+          .getPublicUrl(fileName);
+          
+        imageUrl = publicUrl;
+      }
+
       const productData = {
         name: formData.name,
         price: parseFloat(formData.price),
-        image: formData.image,
+        original_price: formData.originalPrice ? parseFloat(formData.originalPrice) : null,
+        description: formData.description,
+        image: imageUrl,
         category: formData.category
       };
 
@@ -131,6 +159,8 @@ const Admin: React.FC = () => {
     setFormData({
       name: product.name,
       price: product.price.toString(),
+      originalPrice: product.originalPrice?.toString() || '',
+      description: product.description || '',
       image: product.image,
       category: product.category || ''
     });
@@ -147,9 +177,12 @@ const Admin: React.FC = () => {
     setFormData({
       name: '',
       price: '',
+      originalPrice: '',
+      description: '',
       image: '',
       category: ''
     });
+    setImageFile(null);
   };
 
   const handleSignOut = async () => {
@@ -168,9 +201,9 @@ const Admin: React.FC = () => {
   return (
     <div className="min-h-screen bg-background p-6">
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold">Admin Panel - Product Management</h1>
-          <div className="flex gap-4">
+        <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
+          <h1 className="text-2xl md:text-3xl font-bold text-center md:text-left">Admin Panel - Product Management</h1>
+          <div className="flex flex-col md:flex-row gap-2 md:gap-4">
             <Button onClick={openAddDialog} className="flex items-center gap-2">
               <Plus className="h-4 w-4" />
               Add Product
@@ -194,8 +227,16 @@ const Admin: React.FC = () => {
               </div>
               <CardContent className="p-4">
                 <h3 className="font-semibold text-lg mb-2">{product.name}</h3>
-                <p className="text-muted-foreground mb-2">{product.category}</p>
-                <p className="text-xl font-bold text-primary mb-4">${product.price}</p>
+                <div className="flex items-center gap-2 mb-2">
+                  <p className="text-xl font-bold text-primary">₦{product.price.toLocaleString()}</p>
+                  {product.originalPrice && (
+                    <p className="text-sm text-muted-foreground line-through">₦{product.originalPrice.toLocaleString()}</p>
+                  )}
+                </div>
+                <p className="text-sm text-muted-foreground mb-2">{product.category}</p>
+                {product.description && (
+                  <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{product.description}</p>
+                )}
                 <div className="flex gap-2">
                   <Button
                     onClick={() => openEditDialog(product)}
@@ -239,27 +280,56 @@ const Admin: React.FC = () => {
                 />
               </div>
               
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="price">Price (₦)</Label>
+                  <Input
+                    id="price"
+                    type="number"
+                    value={formData.price}
+                    onChange={(e) => setFormData({ ...formData, price: e.target.value })}
+                    required
+                  />
+                </div>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="originalPrice">Original Price (₦)</Label>
+                  <Input
+                    id="originalPrice"
+                    type="number"
+                    value={formData.originalPrice}
+                    onChange={(e) => setFormData({ ...formData, originalPrice: e.target.value })}
+                  />
+                </div>
+              </div>
+              
               <div className="space-y-2">
-                <Label htmlFor="price">Price</Label>
-                <Input
-                  id="price"
-                  type="number"
-                  step="0.01"
-                  value={formData.price}
-                  onChange={(e) => setFormData({ ...formData, price: e.target.value })}
-                  required
+                <Label htmlFor="description">Description</Label>
+                <textarea
+                  id="description"
+                  value={formData.description}
+                  onChange={(e) => setFormData({ ...formData, description: e.target.value })}
+                  className="w-full px-3 py-2 border border-input bg-background rounded-md text-sm"
+                  rows={3}
                 />
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="image">Image URL</Label>
+                <Label htmlFor="image">Product Image</Label>
                 <Input
                   id="image"
-                  value={formData.image}
-                  onChange={(e) => setFormData({ ...formData, image: e.target.value })}
-                  placeholder="/product1.jpeg"
-                  required
+                  type="file"
+                  accept="image/jpeg,image/jpg"
+                  onChange={(e) => {
+                    const file = e.target.files?.[0];
+                    if (file) {
+                      setImageFile(file);
+                    }
+                  }}
                 />
+                {formData.image && !imageFile && (
+                  <p className="text-sm text-muted-foreground mt-1">Current image: {formData.image}</p>
+                )}
               </div>
               
               <div className="space-y-2">
