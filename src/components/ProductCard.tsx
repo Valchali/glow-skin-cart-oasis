@@ -27,33 +27,37 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
       </div>
       
       <div className="p-6">
-        <div className="flex justify-between items-start mb-2">
-          <h3 className="text-xl font-semibold text-gray-800 transition-colors duration-200">
+        <div className="mb-3">
+          <h3 className="text-lg font-semibold text-gray-800 mb-2 line-clamp-2">
             {product.name}
           </h3>
-          <div className="text-right">
-            <span className="text-2xl font-bold text-pink-600">
-              ₦{product.price.toLocaleString()}
+          <div className="flex items-baseline gap-2 mb-2">
+            <span className="text-xl font-bold text-pink-600">
+              ₦{Number(product.price).toLocaleString()}
             </span>
             {product.originalPrice && (
-              <div className="text-sm text-gray-500 line-through">
-                ₦{product.originalPrice.toLocaleString()}
-              </div>
+              <span className="text-sm text-gray-500 line-through">
+                ₦{Number(product.originalPrice).toLocaleString()}
+              </span>
             )}
           </div>
         </div>
         
-        <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-          {product.description}
-        </p>
+        {product.description && (
+          <p className="text-gray-600 text-sm mb-3 line-clamp-3">
+            {product.description}
+          </p>
+        )}
         
         <div className="flex items-center justify-between">
-          <span className="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
-            {product.category}
-          </span>
+          {product.category && (
+            <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
+              {product.category}
+            </span>
+          )}
           <button
             onClick={() => onAddToCart(product)}
-            className="bg-gradient-to-r from-pink-500 to-rose-500 text-white px-6 py-2 rounded-full hover:from-pink-600 hover:to-rose-600 transition-all duration-200 transform hover:scale-105 font-medium"
+            className="bg-gradient-to-r from-pink-500 to-rose-500 text-white px-4 py-2 rounded-full hover:from-pink-600 hover:to-rose-600 transition-all duration-200 transform hover:scale-105 font-medium text-sm"
           >
             Add to Cart
           </button>
