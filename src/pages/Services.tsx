@@ -1,13 +1,21 @@
 
 import React from 'react';
 import { Sparkles, Zap, Microscope, Leaf, Heart, Sun } from 'lucide-react';
+import antiAgingImage from '../assets/anti-aging-treatment.jpg';
+import acneTreatmentImage from '../assets/acne-treatment.jpg';
+import laserTreatmentImage from '../assets/laser-treatment.jpg';
+import skinTagsMolesImage from '../assets/skin-tags-moles.jpg';
+import hyperpigmentationImage from '../assets/hyperpigmentation.jpg';
+import eczemaPsoriasisImage from '../assets/eczema-psoriasis.jpg';
+import hairLossImage from '../assets/hair-loss.jpg';
+import skinScreeningImage from '../assets/skin-screening.jpg';
 
 const Services = () => {
   const serviceCategories = [
     {
       icon: <Sparkles className="w-8 h-8 text-pink-600" />,
       title: "Anti-Aging Herbal Treatments",
-      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&h=300&fit=crop",
+      image: antiAgingImage,
       services: [
         {
           name: "Natural Anti-Aging Solutions",
@@ -18,7 +26,7 @@ const Services = () => {
     {
       icon: <Heart className="w-8 h-8 text-pink-600" />,
       title: "Acne & Scar Herbal Treatment",
-      image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=400&h=300&fit=crop",
+      image: acneTreatmentImage,
       services: [
         {
           name: "Natural Acne Management", 
@@ -29,7 +37,7 @@ const Services = () => {
     {
       icon: <Zap className="w-8 h-8 text-pink-600" />,
       title: "Laser Keloid & Wart Removal",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop",
+      image: laserTreatmentImage,
       services: [
         {
           name: "Professional Laser Treatment",
@@ -40,7 +48,7 @@ const Services = () => {
     {
       icon: <Leaf className="w-8 h-8 text-pink-600" />,
       title: "Skin Tag & Mole Herbal Removal",
-      image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=400&h=300&fit=crop",
+      image: skinTagsMolesImage,
       services: [
         {
           name: "Natural Removal Techniques",
@@ -51,7 +59,7 @@ const Services = () => {
     {
       icon: <Sun className="w-8 h-8 text-pink-600" />,
       title: "Hyperpigmentation Herbal Treatment",
-      image: "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=400&h=300&fit=crop",
+      image: hyperpigmentationImage,
       services: [
         {
           name: "Natural Skin Brightening",
@@ -62,7 +70,7 @@ const Services = () => {
     {
       icon: <Heart className="w-8 h-8 text-pink-600" />,
       title: "Eczema & Psoriasis Herbal Care",
-      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=300&fit=crop",
+      image: eczemaPsoriasisImage,
       services: [
         {
           name: "Soothing Herbal Treatments",
@@ -73,7 +81,7 @@ const Services = () => {
     {
       icon: <Leaf className="w-8 h-8 text-pink-600" />,
       title: "Hair Loss Herbal Treatment",
-      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&h=300&fit=crop",
+      image: hairLossImage,
       services: [
         {
           name: "Natural Hair Growth Solutions",
@@ -84,7 +92,7 @@ const Services = () => {
     {
       icon: <Microscope className="w-8 h-8 text-pink-600" />,
       title: "Skin Cancer Screening",
-      image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=400&h=300&fit=crop",
+      image: skinScreeningImage,
       services: [
         {
           name: "Professional Assessment",
