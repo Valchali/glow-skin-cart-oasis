@@ -1,10 +1,10 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -14,6 +14,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Cart from './pages/Cart';
 import Auth from './pages/Auth';
+import AdminSignup from './pages/AdminSignup';
 import Admin from './pages/Admin';
 import SetupAdmin from './pages/SetupAdmin';
 import NotFound from './pages/NotFound';
@@ -22,6 +23,17 @@ import { Product, CartItem } from './types/Product';
 import { toast } from '@/hooks/use-toast';
 
 const queryClient = new QueryClient();
+
+// Component to handle scroll to top on route change
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 const App = () => {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
@@ -85,6 +97,7 @@ const App = () => {
           <Toaster />
           <Sonner />
           <BrowserRouter>
+            <ScrollToTop />
             <div className="min-h-screen bg-white flex flex-col">
               <Header cartItemsCount={cartItemsCount} />
               <main className="flex-1">
@@ -105,6 +118,7 @@ const App = () => {
                     } 
                   />
                   <Route path="/auth" element={<Auth />} />
+                  <Route path="/admin/signup" element={<AdminSignup />} />
                   <Route path="/admin" element={<Admin />} />
                   <Route path="/setup-admin" element={<SetupAdmin />} />
                   <Route path="*" element={<NotFound />} />

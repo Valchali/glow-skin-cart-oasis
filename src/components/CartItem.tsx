@@ -15,7 +15,7 @@ const CartItem: React.FC<CartItemProps> = ({ item, onUpdateQuantity, onRemove })
       <img 
         src={item.image} 
         alt={item.name}
-        className="w-20 h-20 object-cover rounded-xl mx-auto sm:mx-0"
+        className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 object-cover rounded-xl mx-auto sm:mx-0 flex-shrink-0"
       />
       
       <div className="flex-1 text-center sm:text-left w-full sm:w-auto">
